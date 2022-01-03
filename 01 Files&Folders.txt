@@ -1,0 +1,10 @@
+# Create new Folder:
+   New-Item -Path "c:\" -Name "MyFolder" -ItemType "directory"
+
+## Files:
+   # Create a file:
+      New-Item -Path . -Name "myFile.txt" -ItemType "file" -Value "This is a text string inside the file":
+
+   # Rename:
+      Rename-Item -Path "fileOldName.txt" -NewName "fileNewName.txt" 
+
