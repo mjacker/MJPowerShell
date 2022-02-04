@@ -8,3 +8,8 @@
    # Rename:
       Rename-Item -Path "fileOldName.txt" -NewName "fileNewName.txt" 
 
+   # Move:
+      Move-Item name name2
+   
+   # Copy:
+      Copy-Item -Path "c:\logFiles\*" -destination "c:\Draws" -Recurse

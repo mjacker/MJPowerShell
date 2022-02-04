@@ -1,0 +1,2 @@
+# SET ALIAS TO A FUNCTION
+   Set-Alias -Name m -Value functionName
