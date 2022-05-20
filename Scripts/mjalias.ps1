@@ -31,8 +31,14 @@ function Get-LsKali () {
 	wsl ls --color=auto -hF $args
 }
 
+# Functions for gits
+function Get-GitLog () {
+	git log --all --oneline	--graph --decorate
+}
+
 
 New-Alias -Name lf Get-ListFolders
 New-Alias -Name ln Get-DirNames
 New-Alias -Name im Import-Module 
 New-alias -Name lk -Value Get-LsKali -Option AllScope
+New-Alias -Name glo -Value Get-GitLog
