@@ -36,9 +36,15 @@ function Get-GitLog () {
 	git log --all --oneline	--graph --decorate
 }
 
+# Get Weather from wttr.in
+function Get-Weather(){
+	curl wttr.in/Fernando+de+la+Mora?1?m/:bash.function
+}
+
 
 New-Alias -Name lf Get-ListFolders
 New-Alias -Name ln Get-DirNames
 New-Alias -Name im Import-Module 
 New-alias -Name lk -Value Get-LsKali -Option AllScope
 New-Alias -Name glo -Value Get-GitLog
+New-Alias -name getWeather -value Get-Weather
