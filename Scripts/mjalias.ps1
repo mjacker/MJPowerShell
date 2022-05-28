@@ -9,7 +9,8 @@ function Get-DirNames{
 # from stackoverflow.com/questions/1287718
 function Write-BranchName () {
 	try {
-		$branch = git rev-parse --abbrev-ref HEAD
+		# $branch = git rev-parse --abbrev-ref HEAD
+		Sbranch = git branch --show-current
 
 		if ($branch -eq "HEAD") {
 			# we're probably in detached HEAD state, so print the SHA
