@@ -47,6 +47,17 @@ function Get-LsKali () {
 	}
 
 
+# Get MJAlias Help
+	function Get-MJAliasHelp () {
+		Write-Host "lf:         List folders."
+		Write-Host "ln:         List names."
+		Write-Host "im:         Import module."
+		Write-Host "lk:         Kali -ls"
+		Write-Host "glo:        Git Log."
+		Write-Host "gfp:        Git files pushed."
+		Write-Host "getWeather: Get local weather."
+}
+
 # From PowerShell
 New-Alias -Name lf Get-ListFolders
 New-Alias -Name ln Get-DirNames
@@ -61,3 +72,6 @@ New-Alias -Name gfp -Value Get-FilesPushed
 
 # External - Check weather
 New-Alias -name getWeather -value Get-Weather
+
+# MJAliasHelp
+New-Alias -Name mjalias -value Get-MJAliasHelp
