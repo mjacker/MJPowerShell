@@ -9,8 +9,8 @@ function Get-DirNames{
 # from stackoverflow.com/questions/1287718
 function Write-BranchName () {
 	try {
-		# $branch = git rev-parse --abbrev-ref HEAD
-		Sbranch = git branch --show-current
+		$branch = git rev-parse --abbrev-ref HEAD
+		# $branch = git branch --show-current
 
 		if ($branch -eq "HEAD") {
 			# we're probably in detached HEAD state, so print the SHA
@@ -33,19 +33,31 @@ function Get-LsKali () {
 }
 
 # Functions for gits
-function Get-GitLog () {
-	git log --all --oneline	--graph --decorate
-}
+	function Get-GitLog () {
+		git log --all --oneline	--graph --decorate
+	}
+
+	function Get-FilesPushed () {
+		git ls-tree -r --name-only master
+	}
 
 # Get Weather from wttr.in
-function Get-Weather(){
-	curl wttr.in/Fernando+de+la+Mora?1?m/:bash.function
-}
+	function Get-Weather(){
+		curl wttr.in/Fernando+de+la+Mora?1?m/:bash.function
+	}
 
 
+# From PowerShell
 New-Alias -Name lf Get-ListFolders
 New-Alias -Name ln Get-DirNames
 New-Alias -Name im Import-Module 
+
+# WSL Linux sub-sytem
 New-alias -Name lk -Value Get-LsKali -Option AllScope
+
+# Git
 New-Alias -Name glo -Value Get-GitLog
+New-Alias -Name gfp -Value Get-FilesPushed
+
+# External - Check weather
 New-Alias -name getWeather -value Get-Weather
