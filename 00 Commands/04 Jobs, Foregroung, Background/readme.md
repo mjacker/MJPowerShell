@@ -30,6 +30,10 @@ Display all job status.
 Receive the data from job.
 `Receive-Job -Name GetAllFiles -keep`
 
+### Stop-Job
+Stop a job
+`Stop-Job <name>`
+
 ### Remove-Job
 Remove a job.
 `Get-Job -name "GetAllFiles* | Remove Job` 
