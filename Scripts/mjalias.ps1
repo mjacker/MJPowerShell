@@ -56,6 +56,13 @@ function Get-LsKali () {
 		Write-Host "glo:        Git Log."
 		Write-Host "gfp:        Git files pushed."
 		Write-Host "getWeather: Get local weather."
+		Write-Host " "
+		Write-Host "jobs:       Get-Job."
+		Write-Host "            Receive-Job."
+		Write-Host "            Remove-Job."
+		Write-Host "            Start-Job."
+		Write-Host "            Stop-Job."
+		Write-Host "            Wait--Job."
 }
 
 # From PowerShell
@@ -75,3 +82,6 @@ New-Alias -name getWeather -value Get-Weather
 
 # MJAliasHelp
 New-Alias -Name mjalias -value Get-MJAliasHelp
+
+# Jobs - Section
+New-Alias -Name jobs -value Get-Job
