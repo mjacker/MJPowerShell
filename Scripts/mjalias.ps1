@@ -56,6 +56,7 @@ function Get-LsKali () {
 		Write-Host "glo:        Git Log."
 		Write-Host "gfp:        Git files pushed."
 		Write-Host "getWeather: Get local weather."
+		Write-Host "sm:			Show Markdown using browser."
 		Write-Host " "
 		Write-Host "jobs:       Get-Job."
 		Write-Host "            Receive-Job."
@@ -65,11 +66,20 @@ function Get-LsKali () {
 		Write-Host "            Wait--Job."
 }
 
+# PowerShell functions
+	function Show-Markdown-Web ([string]$arg){
+		$temp = "Show-Markdown -UseBrowser " + $arg;
+		Write-Host $temp
+		pwsh --command $temp;
+	}
+
+
 # From PowerShell
 Remove-Alias -Name ls #because can't overrride it
 New-Alias -Name ls Get-ListS
 New-Alias -Name ll Get-ListAttrib
 New-Alias -Name im Import-Module 
+New-Alias -Name sm Show-Markdown-Web
 
 # WSL Linux sub-sytem
 New-alias -Name lk -Value Get-LsKali -Option AllScope
