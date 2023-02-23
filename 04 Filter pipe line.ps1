@@ -1,1 +1,0 @@
-dir | Select-String "readme"
