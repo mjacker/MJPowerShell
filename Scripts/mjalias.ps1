@@ -64,6 +64,15 @@ function Get-LsKali () {
 		Write-Host "            Start-Job."
 		Write-Host "            Stop-Job."
 		Write-Host "            Wait--Job."
+		Write-Host " "
+		Write-Host " Paths:"
+		Write-Host " - $ mats"
+		Write-Host " - $ gits"
+		Write-Host " - $ mjpwsh"
+		
+
+
+		
 }
 
 # PowerShell functions
