@@ -16,3 +16,10 @@ Using function's scriptblock File property
 `Write-Host ${function:Get-ListS}.File`
 
 
+---
+## Getting aliases for a cmdlet
+`Get-Alias -Definition Get-childItem`
+
+Output:
+> CommandType	Name
+> Alias	dir -> Get-ChildItem
