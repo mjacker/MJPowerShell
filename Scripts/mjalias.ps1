@@ -76,19 +76,26 @@ function Get-LsKali () {
 }
 
 # PowerShell functions
-	function Show-Markdown-Web ([string]$arg){
-		$temp = "Show-Markdown -UseBrowser " + $arg;
-		Write-Host $temp
-		pwsh --command $temp;
-	}
+#	function Show-Markdown-Web ([string]$arg){
+#		$temp = "Show-Markdown -UseBrowser " + $arg;
+#		Write-Host $temp
+#		pwsh --command $temp;
+#	}
 
+### Markdown
+function mjshowMarkdown ([string]$arg){
+#	"D:\_Jaime\_GIT\04_MJGITs\08 PowerShell\Colors\01 Show-Markdown set get colors\02 set custom show-markdown colors on powershell.ps1"
+	Set-MarkdownOption -Header1Color '[4;42m' -Header6Color '[4;32m'
+	$temp = "Show-MArkdown " + $arg + "| more"
+	pwsh --command $temp;
+} 
 
 # From PowerShell
 Remove-Alias -Name ls #because can't overrride it
 New-Alias -Name ls Get-ListS
 New-Alias -Name ll Get-ListAttrib
 New-Alias -Name im Import-Module 
-New-Alias -Name sm Show-Markdown-Web
+New-Alias -Name sm mjshowMarkdown 
 
 # WSL Linux sub-sytem
 New-alias -Name lk -Value Get-LsKali -Option AllScope
