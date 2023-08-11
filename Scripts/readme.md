@@ -1,9 +1,7 @@
-## My customs scripts
-	Just some customs that I usually use.
+# My customs scripts
+Just some customs that I usually use.
+
 
 ---
-
-## Index
-	* [01 Custom Alias](/mjalias.ps1)
-	* [02 Gcc compiler}(/GccRun.ps1)
-	* [03 Custom Powershell prompt](/promptCustom.ps1)
+# Index
+	* [MJ Alias markdown.](/Scripts/mjaliasasmd.md)
