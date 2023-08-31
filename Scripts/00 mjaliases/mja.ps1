@@ -99,11 +99,22 @@ function Get-LsKali () { wsl ls --color=auto -hF $args }
 function Cd-back-back { cd .. }
 
 ## MJA
-function Get-Mja (){ cat "D:\_Jaime\_GIT\04_MJGITs\08 PowerShell\Scripts\00 mjaliases\mja.ps1" }
-function Edit-Mja (){ vim "D:\_Jaime\_GIT\04_MJGITs\08 PowerShell\Scripts\00 mjaliases\mja.ps1" }
+function Get-Mja (){ cat "D:\_Jaime\_GIT\04_MJGITs\08 (git) PowerShell\Scripts\00 mjaliases\mja.ps1" }
+function Edit-Mja (){ vim "D:\_Jaime\_GIT\04_MJGITs\08 (git) PowerShell\Scripts\00 mjaliases\mja.ps1" }
+function Push-Mja ([string]$comment){ 
+cd "D:\_Jaime\_GIT\04_MJGITs\08 (git) PowerShell\Scripts\00 mjaliases\";
+git add "D:\_Jaime\_GIT\04_MJGITs\08 (git) PowerShell\Scripts\00 mjaliases\mja.ps1";
+git commit -m $comment;
+cd -
+} ; New-Alias -Name pmja Push-Mja
+
 
 ## PATH-ALIAS
+$mjbrain="D:\_Jaime\_GIT\04_MJGITs\mjbrain"
 function Go-path-gits { cd $gits }; New-Alias -Name gits Go-path-gits
+function Go-path-capstone { cd $caps }; New-Alias -Name caps Go-path-capstone
+function Go-path-mjbrain{ cd $mjbrain }; New-Alias -Name mjbrain Go-path-mjbrain
+function Go-path-mjbrain{ cd $mjbrain }; New-Alias -Name brain Go-path-mjbrain
 
 # ALIASES
 # mjalias
@@ -125,5 +136,4 @@ New-Alias -Name gfp -Value Get-FilesPushed
 
 ## Jobs - Section
 New-Alias -Name jobs -value Get-Job
-
 
